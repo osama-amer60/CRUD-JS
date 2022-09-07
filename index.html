@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="w-75 py-3 mx-auto">
+      <label for="ProductName">ProductName :</label>
+      <input type="text" class="form-control my-2" id="ProductName" />
+
+      <label for="ProductCount">ProductCount :</label>
+      <input type="number" class="form-control my-2" id="ProductCount" />
+
+      <label for="ProductPrice">ProductPrice :</label>
+      <input type="number" class="form-control my-2" id="ProductPrice" />
+
+      <label for="ProductCategory">ProductCategory :</label>
+      <input type="text" class="form-control my-2" id="ProductCategory" />
+
+      <label for="ProductDes">ProductDescribtion :</label>
+      <input type="text" class="form-control my-2" id="ProductDes" />
+
+      <button id="mainButton" onclick="addProduct()" class="btn btn-info">Add Product</button>
+    </div>
+
+    <div class="w-75 py-3 mx-auto">
+
+      <div class=" w-75 mx-auto py-4">
+        <label for="searchInput"> search...</label>
+        <input onkeyup="searchProducts(this.value)" type="text" class="form-control" id="searchInput" />
+      </div>
+      <table class="table text-center">
+        <thead>
+          <th>index</th>
+          <th>ProductName</th>
+          <th>ProductCount</th>
+          <th>ProductPrice</th>
+          <th>ProductCategory</th>
+          <th>ProductDescribtion</th>
+          <th>increase</th>
+          <th>decrese</th>
+          <th>update</th>
+          <th>delete</th>
+        </thead>
+        <tbody id="tableRow">
+          
+        </tbody>
+      </table>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
