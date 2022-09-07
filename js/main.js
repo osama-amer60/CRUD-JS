@@ -139,3 +139,7 @@ function updateCount(index, num) {
     displayProduct(productContainer);
   }
 }
+
+
+
+//Done
