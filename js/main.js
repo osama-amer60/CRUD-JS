@@ -4,6 +4,7 @@ var ProductPriceInput = document.getElementById("ProductPrice");
 var ProductCategoryInput = document.getElementById("ProductCategory");
 var ProductDesInput = document.getElementById("ProductDes");
 var mainBtn = document.getElementById("mainButton");
+let warningMsg = document.getElementById("warningMsg");
 var productContainer;
 var getIndex;
 
@@ -17,7 +18,16 @@ if (localStorage.getItem("products") == null) {
 //...................................................................
 // addProduct Function
 function addProduct() {
-  if (validateProductName()) {
+  if (
+    ProductNameInput.value == "" ||
+    ProductCountInput.value == "" ||
+    ProductPriceInput.value == "" ||
+    ProductCategoryInput.value == "" ||
+    ProductDesInput.value == ""
+  ) {
+    warningMsg.classList.remove("d-none");
+    removeWarningMsg()
+  }else if(validateProductName()) {
     if (mainBtn.innerHTML == "Add Product") {
       var product = {
         name: ProductNameInput.value,
@@ -42,8 +52,17 @@ function addProduct() {
       mainBtn.innerHTML = "Add Product";
     }
   } else {
-    alert("wrong ");
+    warningMsg.innerHTML = "*please start the product's name with capital letter"
+    warningMsg.classList.remove("d-none");
+    removeWarningMsg()
   }
+}
+
+function removeWarningMsg(){
+  setTimeout(() => {
+    warningMsg.classList.add("d-none");
+
+  }, 3000);
 }
 //.....................................................................
 // displayProduct Function
@@ -139,7 +158,5 @@ function updateCount(index, num) {
     displayProduct(productContainer);
   }
 }
-
-
 
 //Done
