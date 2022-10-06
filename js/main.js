@@ -26,8 +26,8 @@ function addProduct() {
     ProductDesInput.value == ""
   ) {
     warningMsg.classList.remove("d-none");
-    removeWarningMsg()
-  }else if(validateProductName()) {
+    removeWarningMsg();
+  } else if (validateProductName()) {
     if (mainBtn.innerHTML == "Add Product") {
       var product = {
         name: ProductNameInput.value,
@@ -52,16 +52,16 @@ function addProduct() {
       mainBtn.innerHTML = "Add Product";
     }
   } else {
-    warningMsg.innerHTML = "*please start the product's name with capital letter"
+    warningMsg.innerHTML =
+      "*please start the product's name with capital letter";
     warningMsg.classList.remove("d-none");
-    removeWarningMsg()
+    removeWarningMsg();
   }
 }
 
-function removeWarningMsg(){
+function removeWarningMsg() {
   setTimeout(() => {
     warningMsg.classList.add("d-none");
-
   }, 3000);
 }
 //.....................................................................
@@ -137,7 +137,7 @@ function updateProduct(index) {
 // valadation Function
 
 function validateProductName() {
-  var regex = /^[A-Z][a-z]{3,8}$/;
+  var regex = /^[A-Z][a-z]{3,10}$/;
 
   if (regex.test(ProductNameInput.value)) {
     return true;
