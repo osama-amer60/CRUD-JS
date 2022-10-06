@@ -11,38 +11,39 @@
   </head>
   <body>
     <div class="w-75 py-3 mx-auto">
-      <label for="ProductName">ProductName :</label>
+      <label for="ProductName">Product Name :</label>
       <input type="text" class="form-control my-2" id="ProductName" />
 
-      <label for="ProductCount">ProductCount :</label>
+      <label for="ProductCount">Product Count :</label>
       <input type="number" class="form-control my-2" id="ProductCount" />
 
-      <label for="ProductPrice">ProductPrice :</label>
+      <label for="ProductPrice">Product Price :</label>
       <input type="number" class="form-control my-2" id="ProductPrice" />
 
-      <label for="ProductCategory">ProductCategory :</label>
+      <label for="ProductCategory">Product Category :</label>
       <input type="text" class="form-control my-2" id="ProductCategory" />
 
-      <label for="ProductDes">ProductDescribtion :</label>
+      <label for="ProductDes">Product Describtion :</label>
       <input type="text" class="form-control my-2" id="ProductDes" />
 
+      <div id="warningMsg" class="text-danger mb-3 d-none">*please fill all fields</div>
       <button id="mainButton" onclick="addProduct()" class="btn btn-info">Add Product</button>
     </div>
 
     <div class="w-75 py-3 mx-auto">
 
       <div class=" w-75 mx-auto py-4">
-        <label for="searchInput"> search...</label>
-        <input onkeyup="searchProducts(this.value)" type="text" class="form-control" id="searchInput" />
+        <label for="searchInput"> Search...</label>
+        <input onkeyup="searchProducts(this.value)" type="text" class="form-control" id="searchInput" placeholder="Enter the product's name"/>
       </div>
       <table class="table text-center">
         <thead>
           <th>index</th>
-          <th>ProductName</th>
-          <th>ProductCount</th>
-          <th>ProductPrice</th>
-          <th>ProductCategory</th>
-          <th>ProductDescribtion</th>
+          <th>Product Name</th>
+          <th>Product Count</th>
+          <th>Product Price</th>
+          <th>Product Category</th>
+          <th>Product Describtion</th>
           <th>increase</th>
           <th>decrese</th>
           <th>update</th>
