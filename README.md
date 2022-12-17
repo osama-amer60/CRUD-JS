@@ -1,6 +1,6 @@
-#CRUD operation project.
+# CRUD operation project.
 
-##Html ,Css , Bootstrap, JavaScript.
+## Html ,Css , Bootstrap, JavaScript.
 
 * 📌add new product to the list with unique id.
 * 📌increasing and decreasing the quantity of product. 
